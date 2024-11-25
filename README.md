@@ -11,4 +11,21 @@ echo file пишешь там что то
   пишешь git add --all  
   git commit -m "какойто коментарий"  
   git push  
-  проверяешьл н асйте что все норм
+  проверяешьл на сйте что все норм
+  У кажого комита есть свой хеш  
+  -это своеобразны id по которому можно определить его однозначно  
+  HEAD - это ссылка на последний коммит  
+  У файлом есть 4 статуса  
+  1. Untreaced  - это новый фал за изменениями котрого гит не следит
+  2. Tracked - это когда гит уже следит за файлом после команды add или commit(не ntraced) 
+  3. Staget - это состояние файло после add оно на сцене  
+  4. Modified - Что то было, оно изменилось и не совпадает с тем что закомичено.  
+  ```mermaid
+  untracked -- "git add" --> staged;  
+   staged    -- "git commit"     --> tracked/comitted;  
+  tracked/comitted -- "some change" --> modified;  
+  modified -- "git add" --> tracked/comitted;  
+  .  
+  .  
+  .
+  ```
